@@ -1,16 +1,32 @@
-# 2048 Game (JavaScript)
+# JS2048 — 2048 Game (JavaScript)
 
-A browser implementation of the 2048 puzzle game built with HTML, modern JavaScript and SCSS. Play the classic sliding-tile game in your browser — merge tiles to reach 2048.
+Live demo: https://vladokvl.github.io/2048_game_JS/
 
-## Live Preview
+## Introduction
 
-- https://vladokvl.github.io/2048_game_JS/
+JS2048 is a browser implementation of the classic 2048 puzzle game. It is built with HTML, SCSS and modern JavaScript (ES6+). Combine numbered tiles on a 4×4 grid to reach the 2048 tile. The project is optimized for both desktop and mobile play.
 
-> ⚠️ Ensure the link is publicly accessible. Test it in incognito mode to verify functionality.
+## Key Features
 
-## Design Reference (If Applicable)
+- Smooth tile movement and merge animations
+- Responsive layout (desktop, tablet, mobile)
+- Score tracking and best score display
+- Win / lose detection with player feedback
+- Restart / New Game functionality
+- Keyboard and touch (swipe) controls
 
-- Original 2048 game: https://play2048.co/ (design and gameplay reference)
+## Controls
+
+- Arrow keys or WASD to move tiles
+- Swipe on touch devices
+- Click the "New Game" / "Restart" button to reset the board
+
+## Game Rules
+
+- Slide tiles to combine tiles with the same number
+- When two tiles of the same value collide, they merge into one tile with their sum
+- The goal is to create a tile with the value 2048
+- The game ends when there are no valid moves left
 
 ## Technologies Used
 
@@ -18,71 +34,84 @@ A browser implementation of the 2048 puzzle game built with HTML, modern JavaScr
 - SCSS (Sass)
 - JavaScript (ES6+)
 - Parcel (bundler)
-- npm (scripts & dependencies)
+- npm
 - GitHub Pages (deployment)
 
-## Getting Started
+## Files of Interest
+
+- [src/index.html](src/index.html)
+- [src/modules/Game.class.js](src/modules/Game.class.js)
+- [src/scripts/main.js](src/scripts/main.js)
+- [src/styles/main.scss](src/styles/main.scss)
+- [scripts/deploy.js](scripts/deploy.js)
+
+## Requirements
+
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Node.js 14.x or newer and npm 6.x or newer (for local development and build)
+
+## Installation and Setup
 
 1. Clone the repository:
 
-```
+```bash
 git clone https://github.com/Vladokvl/2048_game_JS.git
 cd 2048_game_JS
 ```
 
 2. Install dependencies:
 
-```
+```bash
 npm install
-# or
-yarn install
 ```
 
-3. Run the project locally:
+3. Start the development server:
 
-```
+```bash
 npm start
-# or
-yarn start
 ```
+
+Open the address shown in the terminal (the dev server will print the local URL).
 
 4. Build for production:
 
-```
+```bash
 npm run build
-# or
-yarn build
 ```
 
-5. Deploy to GitHub Pages (already configured for this repo):
+5. Deploy to GitHub Pages:
 
-```
+```bash
 npm run deploy
-# or
-yarn deploy
 ```
 
-## Features
+The `deploy` script runs `scripts/deploy.js` from this repository.
 
-- Classic 2048 gameplay (swipe or arrow keys to move tiles)
-- Smooth animations and responsive layout
-- Score tracking and restart
+## Demo
 
-## README Checklist
+- Live demo: https://vladokvl.github.io/2048_game_JS/
 
-- No Mate Academy-specific instructions remain in the README. ✅
-- The project includes a clear and concise description. ✅
-- The live demo link works properly. ✅
-- Technologies are correctly listed and relevant. ✅
-- Setup instructions are clear and easy to follow. ✅
-- The GitHub repository is clean and well-organized (no unnecessary files). ✅
+## Design Specifications
 
----
+- Desktop: 1280px
+- Tablet: 640px
+- Mobile: ≥ 320px
 
-If you want, I can also:
+## Challenges
 
-- Add a short CONTRIBUTING section
-- Add screenshots or a GIF to the README
-- Add a short `docs/` folder with game rules and controls
+- Correct and performant tile movement & merging logic
+- Smooth animations and performance on low-end devices
+- Responsive UI and touch gesture handling
+- Reliable game state management (score, win/lose detection)
+
+## Contributing
+
+- Feel free to open issues or submit pull requests
+- Keep changes focused and include tests or screenshots when relevant
+- Run linters and tests before submitting (see `package.json` scripts)
+
+## License
+
+This project is licensed under GPL-3.0 — see `package.json` for details.
 
 Let me know which you'd prefer.
